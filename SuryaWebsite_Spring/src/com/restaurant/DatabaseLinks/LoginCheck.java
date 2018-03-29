@@ -26,7 +26,7 @@ public class LoginCheck {
 			String sqlQuery = "select password from loginDetails where username=?";
 			jdbcTemplate.setDataSource(getDataSource());
 			dbPassword = jdbcTemplate.queryForObject(sqlQuery, new Object[] {loginUser}, String.class);
-			System.out.println("DB password retrieval= "+dbPassword);		
+			System.out.println("DB password retrieval=          "+dbPassword);		
 			if(dbPassword.equalsIgnoreCase(loginPassword)){
 				return "Login Successful";
 			}else{
